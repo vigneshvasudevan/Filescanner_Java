@@ -11,7 +11,14 @@ public class Consolewriter implements Filewriter{
 		WriteToFile();
 	}
 	public void WriteToFile(){
+		consolewriter(tree);
+	}
 	
+	private void consolewriter(Tree tree){
+		System.out.println(tree.node.Attributes);
+		if(tree.children!=null)
+			for(Tree child: tree.children)
+				consolewriter(child);
 	}
 
 }
